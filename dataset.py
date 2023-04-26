@@ -106,7 +106,7 @@ class DeepFashionDataset(Dataset):
         self.smpl_list = []
         valid_list = []
         for i, p in enumerate(self.image_names):
-            tmp = self.read_smpl(self.smpl_dict[p])
+            tmp = self.read_smpl(self.smpl_dict[p.split("__")[0]])
             if tmp is None:
                 continue
             self.smpl_list.append(tmp)
