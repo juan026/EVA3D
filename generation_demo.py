@@ -250,8 +250,8 @@ if __name__ == "__main__":
         [transforms.ToTensor(),
          transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5), inplace=True)])
     
-    if 'deepfashion' in opt.dataset.dataset_path:
-        file_list = '/mnt/lustre/fzhong/smplify-x/deepfashion_train_list/deepfashion_train_list_MAN.txt'
+    if 'DeepFashion' in opt.dataset.dataset_path:
+        file_list = opt.inference.testing_list
     elif '20w_fashion' in opt.dataset.dataset_path:
         file_list = '/mnt/lustre/fzhong/mmhuman3d/20w_fashion_result/nondress_flist.txt'
     else:

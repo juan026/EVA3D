@@ -60,6 +60,8 @@ class BaseOptions():
         inference.add_argument("--no_surface_renderings", action="store_true", help="when true, only RGB outputs will be generated. otherwise, both RGB and depth videos/renderings will be generated. this cuts the processing time per video")
         inference.add_argument("--fixed_camera_angles", action="store_true", help="when true, the generator will render indentities from a fixed set of camera angles.")
         inference.add_argument("--azim_video", action="store_true", help="when true, the camera trajectory will travel along the azimuth direction. Otherwise, the camera will travel along an ellipsoid trajectory.")
+        inference.add_argument("--testing_list", default="'/mnt/lustre/fzhong/smplify-x/deepfashion_train_list/deepfashion_train_list_MAN.txt'", help="list of files to evaluate the model")
+
 
         # Generator options
         model = self.parser.add_argument_group('model')
